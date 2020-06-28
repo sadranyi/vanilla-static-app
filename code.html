@@ -10,16 +10,13 @@
 
 <body>
   <main>
-    <h1>Vanilla JavaScript Azure static website App, Awesome !!!</h1>
-    <p>Loading Content from the API: <strong id="name">...</strong></p>
+    <h1>Getting your Code</h1>
     <p>Getting Token from the API: <strong id="token">...</strong></p>
   </main>
 
   <script>
     (async function(){
-      let { text } = await (await fetch('/api/message')).json();
       let { code } = await (await fetch('/api/token')).json();
-      document.querySelector('#name').textContent = text;
       document.querySelector('#token').textContent = code;
     }())
   </script>
