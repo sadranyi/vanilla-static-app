@@ -1,7 +1,9 @@
+const faker = require('faker');
+
 module.exports = async function (context, req) {
     context.res = {
         body: {
-            code: "0123ABC@20"
+            code: faker.lorem.word()
         }
     };
 };
